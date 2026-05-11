@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guild Glory Control Panel</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Free Fire Guild Glory Bot Panel</h1>
+    <p class="subtitle">Select up to 4 bots, enter Guild ID, then Continue → Run.</p>
+
+    <section class="card">
+      <h2>Step 1: Bot Selection</h2>
+      <div class="bot-grid" id="botGrid">
+        <label><input type="checkbox" value="Bot-1" /> Bot 1</label>
+        <label><input type="checkbox" value="Bot-2" /> Bot 2</label>
+        <label><input type="checkbox" value="Bot-3" /> Bot 3</label>
+        <label><input type="checkbox" value="Bot-4" /> Bot 4</label>
+      </div>
+      <small id="botHelp">0/4 bots selected</small>
+
+      <label for="guildId">Guild ID</label>
+      <input id="guildId" placeholder="Enter Free Fire Guild ID" />
+
+      <button id="continueBtn">Continue</button>
+    </section>
+
+    <section class="card hidden" id="runSection">
+      <h2>Step 2: Run Bot Flow</h2>
+      <p id="runSummary"></p>
+      <button id="runBtn">Run</button>
+      <pre id="logBox" class="log"></pre>
+    </section>
+
+    <section class="card">
+      <h2>Guest Account Generator (Free)</h2>
+      <p>Create multiple demo guest accounts for testing workflow.</p>
+      <div class="inline">
+        <input id="guestCount" type="number" min="1" max="50" value="5" />
+        <button id="genGuestBtn">Generate Guest Accounts</button>
+      </div>
+      <pre id="guestOutput" class="log"></pre>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
